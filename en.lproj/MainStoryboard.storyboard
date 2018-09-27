@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="11">
+            <objects>
+                <navigationController id="3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="je7-BD-nXm" kind="relationship" relationship="rootViewController" id="ak6-95-8cf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-498" y="-610"/>
+        </scene>
+        <!--Master View Controller - Master-->
+        <scene sceneID="18">
+            <objects>
+                <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="MasterViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="13">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="aXn-2C-BTP">
+                            <rect key="frame" x="0.0" y="354" width="320" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHo-ee-xYa">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="ホームページで確認">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="NBy-a4-0iG" kind="push" identifier="showUrl" id="sue-2i-Lp1"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="IHo-ee-xYa" firstAttribute="centerX" secondItem="aXn-2C-BTP" secondAttribute="centerX" type="default" id="26R-qw-aMw"/>
+                                <constraint firstItem="IHo-ee-xYa" firstAttribute="top" secondItem="aXn-2C-BTP" secondAttribute="top" type="default" id="zeh-if-Sbu"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection id="Qlu-2c-IAU">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="BzJ-HM-AGt" detailTextLabel="wFP-rw-17v" style="IBUITableViewCellStyleValue1" id="BS4-7g-jGR">
+                                        <rect key="frame" x="0.0" y="10" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="銀行カード" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BzJ-HM-AGt">
+                                                    <rect key="frame" x="10" y="11" width="85" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wFP-rw-17v">
+                                                    <rect key="frame" x="226" y="11" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="8xh-qD-aEJ" kind="push" identifier="selectBank" id="qHJ-bB-A8U"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" detailTextLabel="vDn-Yh-kHh" style="IBUITableViewCellStyleValue1" id="lJ0-d7-vTF">
+                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="利用ATM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
+                                                    <rect key="frame" x="10" y="11" width="71" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vDn-Yh-kHh">
+                                                    <rect key="frame" x="226" y="11" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="eXG-T5-0qp" kind="push" identifier="selectAtm" id="0Gr-E1-bni"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="PWL-Su-P2t" style="IBUITableViewCellStyleDefault" id="IeS-SD-RYm">
+                                        <rect key="frame" x="0.0" y="99" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="取引内容" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-Su-P2t">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="rT5-H4-ORt">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="178" id="00e-7S-5Kb">
+                                        <rect key="frame" x="0.0" y="164" width="320" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="177"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="12" id="16"/>
+                            <outlet property="delegate" destination="12" id="15"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ATM手数料検索" id="36"/>
+                    <connections>
+                        <outlet property="atmName" destination="vDn-Yh-kHh" id="ljx-3t-Ba0"/>
+                        <outlet property="bankName" destination="wFP-rw-17v" id="Fcv-e1-rKF"/>
+                        <outlet property="imageCell" destination="00e-7S-5Kb" id="lR7-ir-xzu"/>
+                        <outlet property="segmentCell" destination="IeS-SD-RYm" id="8B0-IJ-MxU"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479" y="-578"/>
+        </scene>
+        <!--Grand Master View Controller - ATM手数料検索-->
+        <scene sceneID="Ond-I1-Uge">
+            <objects>
+                <viewController id="je7-BD-nXm" customClass="GrandMasterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BEe-2M-Unc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptW-O7-Lu4">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="12" kind="embed" id="N0T-2B-mV0"/>
+                                </connections>
+                            </containerView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="8WI-iF-9uS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="glB-nh-XvL"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="je7-BD-nXm" id="iuT-PX-F6V"/>
+                                </connections>
+                            </adBannerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8WI-iF-9uS" firstAttribute="top" secondItem="BEe-2M-Unc" secondAttribute="top" constant="1024" id="8z2-hM-upl"/>
+                            <constraint firstItem="ptW-O7-Lu4" firstAttribute="leading" secondItem="BEe-2M-Unc" secondAttribute="leading" type="default" id="CcX-YV-hnh"/>
+                            <constraint firstItem="ptW-O7-Lu4" firstAttribute="top" secondItem="BEe-2M-Unc" secondAttribute="top" type="default" id="YcM-QY-5Ty"/>
+                            <constraint firstItem="8WI-iF-9uS" firstAttribute="trailing" secondItem="BEe-2M-Unc" secondAttribute="trailing" type="default" id="me7-4z-HUb"/>
+                            <constraint firstItem="8WI-iF-9uS" firstAttribute="leading" secondItem="BEe-2M-Unc" secondAttribute="leading" type="default" id="pwf-1p-mYe"/>
+                            <constraint firstItem="ptW-O7-Lu4" firstAttribute="bottom" secondItem="BEe-2M-Unc" secondAttribute="bottom" type="default" id="txe-4S-PCB"/>
+                            <constraint firstItem="ptW-O7-Lu4" firstAttribute="trailing" secondItem="BEe-2M-Unc" secondAttribute="trailing" type="default" id="zTb-f2-MTq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ATM手数料検索" id="RAW-bA-Xcx"/>
+                    <connections>
+                        <outlet property="bannerView" destination="8WI-iF-9uS" id="gWc-sG-zkd"/>
+                        <outlet property="containerView" destination="ptW-O7-Lu4" id="vS9-Ty-LPy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6lv-Q6-vlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="-610"/>
+        </scene>
+        <!--Web View Controller - ATM利用手数料-->
+        <scene sceneID="fk0-26-mJj">
+            <objects>
+                <viewController id="NBy-a4-0iG" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H1j-nq-L1c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFV-yF-fVu">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="504" id="LyN-cc-9Ud"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="NBy-a4-0iG" id="eZu-9i-Kyz"/>
+                                </connections>
+                            </webView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-VV-In9">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="sfm-2c-zqU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pq8-VP-4I2">
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6Ba-VV-In9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="53O-SI-daD"/>
+                            <constraint firstItem="6Ba-VV-In9" firstAttribute="leading" secondItem="H1j-nq-L1c" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8e4-hV-1aI"/>
+                            <constraint firstItem="6Ba-VV-In9" firstAttribute="top" secondItem="H1j-nq-L1c" secondAttribute="top" constant="79" id="9Vh-fq-uLc"/>
+                            <constraint firstItem="pq8-VP-4I2" firstAttribute="centerX" secondItem="6Ba-VV-In9" secondAttribute="centerX" type="default" id="A8O-7f-zAM"/>
+                            <constraint firstItem="pq8-VP-4I2" firstAttribute="centerY" secondItem="H1j-nq-L1c" secondAttribute="centerY" type="default" id="Xdd-a2-bKw"/>
+                            <constraint firstItem="hFV-yF-fVu" firstAttribute="top" secondItem="H1j-nq-L1c" secondAttribute="top" constant="-1" id="aDo-FT-yMF"/>
+                            <constraint firstItem="hFV-yF-fVu" firstAttribute="leading" secondItem="H1j-nq-L1c" secondAttribute="leading" type="default" id="mcc-Ab-wx0"/>
+                            <constraint firstItem="hFV-yF-fVu" firstAttribute="trailing" secondItem="H1j-nq-L1c" secondAttribute="trailing" type="default" id="t0k-vF-vGw"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VIQ-7e-lWM" appends="YES" id="HyH-RJ-n4b"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="ATM利用手数料" id="PTq-wX-dMd"/>
+                    <connections>
+                        <outlet property="gestureRecognizer" destination="VIQ-7e-lWM" id="TlU-pc-nMP"/>
+                        <outlet property="indicator" destination="pq8-VP-4I2" id="HQZ-EW-66M"/>
+                        <outlet property="messageLabel" destination="6Ba-VV-In9" id="vdz-Cm-WfV"/>
+                        <outlet property="webView" destination="hFV-yF-fVu" id="ZT3-IG-ZVx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="raW-JK-gPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8MG-7Y-m16" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="VIQ-7e-lWM">
+                    <connections>
+                        <segue destination="8MG-7Y-m16" kind="unwind" unwindAction="webViewUnwindSegue2:" id="opL-Vo-PrM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1119" y="82"/>
+        </scene>
+        <!--Atm View Controller - 利用するATM-->
+        <scene sceneID="Veh-iD-YpS">
+            <objects>
+                <tableViewController id="eXG-T5-0qp" customClass="AtmViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="7LL-YI-rwy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="WhF-Vb-cep">
+                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="9vc-1B-Imr" kind="unwind" identifier="backToMain" unwindAction="atmUnwindSegue2:" id="4a2-6D-3tq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eXG-T5-0qp" id="LuX-Dy-FVI"/>
+                            <outlet property="delegate" destination="eXG-T5-0qp" id="V1h-2l-O9w"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="利用するATM" id="ywT-kp-a6M"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nh5-le-em2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9vc-1B-Imr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1119" y="-578"/>
+        </scene>
+        <!--Bank View Controller - 銀行キャッシュカード-->
+        <scene sceneID="PVW-E4-57u">
+            <objects>
+                <tableViewController id="8xh-qD-aEJ" customClass="BankViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="7EE-Ty-tvC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="6br-aR-JvG">
+                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="UVT-iB-VhZ" kind="unwind" identifier="backToMain" unwindAction="bankUnwindSegue2:" id="FO8-7u-UpW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8xh-qD-aEJ" id="OP9-gF-io3"/>
+                            <outlet property="delegate" destination="8xh-qD-aEJ" id="tNd-dL-5Gz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="銀行キャッシュカード" id="GGj-r8-axg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9r-iB-JcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UVT-iB-VhZ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1119" y="-1236"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="AtmViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AtmViewController.h"/>
+        </class>
+        <class className="BankViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BankViewController.h"/>
+        </class>
+        <class className="GrandMasterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GrandMasterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="atmUnwindSegue2:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="bankUnwindSegue2:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="webViewUnwindSegue2:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="atmName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bankName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="segmentCell" candidateClass="UITableViewCell"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+        <class className="WebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="gestureRecognizer" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="outlet" name="indicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="messageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
